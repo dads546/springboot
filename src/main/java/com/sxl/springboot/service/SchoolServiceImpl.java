@@ -32,6 +32,18 @@ public class SchoolServiceImpl implements SchoolService{
 		result.setData(dao.findAll());
 		return result;
 	}
-	
 
+	public School addOrUpdateSchool(School school) {
+		return dao.save(school);
+	}
+	
+	public int delSchool(int school_id) {
+		try {
+			dao.delSchool(school_id);
+			return 1;
+		}catch(Exception e) {
+			return 0;
+		}
+	}	
+	
 }

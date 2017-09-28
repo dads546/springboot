@@ -10,5 +10,9 @@ public interface SchoolService {
 	BaseModelResult<School> getSchoolInfo(Integer school_id);
 
 	BaseModelResult<List<School>> getAllSchool();
+	
+	School addOrUpdateSchool(School school);
+
+	int delSchool(int school_id);
 
 }

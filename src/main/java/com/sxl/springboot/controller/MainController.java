@@ -4,9 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sxl.springboot.common.BaseModelResult;
 import com.sxl.springboot.model.School;
@@ -14,7 +15,7 @@ import com.sxl.springboot.model.User;
 import com.sxl.springboot.service.MainService;
 import com.sxl.springboot.service.SchoolService;
 
-@RestController
+@Controller
 @SpringBootApplication
 @RequestMapping("/main")
 public class MainController {
@@ -24,14 +25,18 @@ public class MainController {
 	@Autowired
 	private SchoolService schoolService;
 	
+	@RequestMapping("/indexPage")
+	public String indexPage(){
+	    return "index.html";
+	}
 	@RequestMapping("/login")
 	public BaseModelResult<User> goLogin(@RequestBody String username,String password) {		
 		return mainService.login(username, password);
 	}
 	
+	@ResponseBody
 	@RequestMapping("/index")
-	public BaseModelResult<List<School>> index(){
-		
+	public BaseModelResult<List<School>> index(){	
 		return schoolService.getAllSchool();
 	}
 	

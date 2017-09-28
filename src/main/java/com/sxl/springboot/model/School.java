@@ -38,8 +38,14 @@ public class School implements Serializable {
 		private String poi;
 		
 		@Column
-		private int radius;
+		private double radius;
 
+		
+		public School(int id,String poi,double radius) {
+			this.id = id;
+			this.poi = poi;
+			this.radius = radius;
+		}
 		public int getId() {
 			return id;
 		}
@@ -88,11 +94,11 @@ public class School implements Serializable {
 			this.poi = poi;
 		}
 
-		public int getRadius() {
+		public double getRadius() {
 			return radius;
 		}
 
-		public void setRadius(int radius) {
+		public void setRadius(double radius) {
 			this.radius = radius;
 		}
 				
