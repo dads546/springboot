@@ -4,10 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sxl.springboot.common.BaseModelResult;
+import com.sxl.springboot.model.School;
+import com.sxl.springboot.model.Sight;
 import com.sxl.springboot.model.User;
 import com.sxl.springboot.service.SchoolService;
 import com.sxl.springboot.service.SightService;
@@ -32,5 +35,34 @@ public class DataController {
 		result.setData(userService.listUsers());
 		return result;
 	}
+	
+	@RequestMapping("/getUserById")
+	public BaseModelResult<User> getUserById(Integer id){
+		return userService.getUser(id);
+	}
+	
+	@RequestMapping("/listSchool")
+	public BaseModelResult<List<School>> listSchool(){
+		return schoolService.getAllSchool();
+	}
 
+	@RequestMapping("/getSchoolById")
+	public BaseModelResult<School> getSchoolById(Integer id){
+		return schoolService.getSchoolInfo(id);
+	}
+	
+	@RequestMapping("/editUser")
+	public BaseModelResult<Integer> editUser(@RequestBody User user){
+		return userService.editUser(user);
+	}
+	
+	@RequestMapping("/editSchool")
+	public BaseModelResult<Integer> editSchool(@RequestBody School school){
+		return schoolService.editSchool(school);
+	}
+	
+	@RequestMapping("/getSchoolSights")
+	public BaseModelResult<List<Sight>> getSightOfSchool(@RequestBody Integer schoolId){		
+		return sightService.getSchoolSight(schoolId);
+	}
 }

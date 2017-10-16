@@ -18,7 +18,7 @@ public class SightServiceImpl implements SightService{
 	public BaseModelResult<Integer> addSight(Sight sight) {
 		BaseModelResult<Integer> result = new BaseModelResult<Integer>();
 		try {
-			dao.save(sight);
+			dao.saveAndFlush(sight);
 		}catch(Exception e) {
 			result.setErrorCode(ErrorCode.FAILED);
 			return result;

@@ -17,4 +17,6 @@ public interface SchoolService {
 
 	List<School> getAroundSchools(List<String> school_names);
 
+	BaseModelResult<Integer> editSchool(School school);
+
 }

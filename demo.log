@@ -15381,3 +15381,507 @@ org.springframework.http.converter.HttpMessageNotReadableException: Required req
 2017-10-16 14:53:04.345 DEBUG 8720 --- [http-nio-80-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Written [com.sxl.springboot.common.BaseModelResult@7f255697] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
 2017-10-16 14:53:04.345 DEBUG 8720 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2017-10-16 14:53:04.345 DEBUG 8720 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:52:36.081 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:52:36.088 DEBUG 8720 --- [http-nio-80-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:52:36.093 DEBUG 8720 --- [http-nio-80-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:52:36.094 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:52:36.168 DEBUG 8720 --- [http-nio-80-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:52:36.195 DEBUG 8720 --- [http-nio-80-exec-2] .w.s.m.m.a.ServletInvocableHandlerMethod : Failed to resolve argument 0 of type 'com.sxl.springboot.model.Sight'
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:201) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:150) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:128) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_74]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportMappingException(DeserializationContext.java:1234) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1122) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1075) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromArray(BeanDeserializerBase.java:1370) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:174) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:150) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 55 common frames omitted
+
+2017-10-16 15:52:36.198 DEBUG 8720 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1]
+2017-10-16 15:52:36.200 DEBUG 8720 --- [http-nio-80-exec-2] .w.s.m.a.ResponseStatusExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1]
+2017-10-16 15:52:36.200 DEBUG 8720 --- [http-nio-80-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1]
+2017-10-16 15:52:36.202  WARN 8720 --- [http-nio-80-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1]
+2017-10-16 15:52:36.203 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:52:36.203 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:52:36.205 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/error]
+2017-10-16 15:52:36.205 DEBUG 8720 --- [http-nio-80-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2017-10-16 15:52:36.206 DEBUG 8720 --- [http-nio-80-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2017-10-16 15:52:36.206 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/error] is: -1
+2017-10-16 15:52:36.211 DEBUG 8720 --- [http-nio-80-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Oct 16 15:52:36 CST 2017, status=400, error=Bad Request, exception=org.springframework.http.converter.HttpMessageNotReadableException, message=JSON parse error: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of com.sxl.springboot.model.Sight out of START_ARRAY token
+ at [Source: java.io.PushbackInputStream@66ef5eae; line: 1, column: 1], path=/schoolGuide/sight/addSight}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:52:36.212 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:52:36.212 DEBUG 8720 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:53:39.643 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:53:39.643 DEBUG 8720 --- [http-nio-80-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:53:39.644 DEBUG 8720 --- [http-nio-80-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:53:39.644 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:53:39.645 DEBUG 8720 --- [http-nio-80-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:53:39.648 DEBUG 8720 --- [http-nio-80-exec-8] .w.s.m.m.a.ServletInvocableHandlerMethod : Failed to resolve argument 0 of type 'com.sxl.springboot.model.Sight'
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:201) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:150) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:128) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_74]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1702) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:558) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:456) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleOddName(UTF8StreamJsonParser.java:2054) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._parseName(UTF8StreamJsonParser.java:1701) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:776) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:144) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 55 common frames omitted
+
+2017-10-16 15:53:39.649 DEBUG 8720 --- [http-nio-80-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3]
+2017-10-16 15:53:39.649 DEBUG 8720 --- [http-nio-80-exec-8] .w.s.m.a.ResponseStatusExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3]
+2017-10-16 15:53:39.650 DEBUG 8720 --- [http-nio-80-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3]
+2017-10-16 15:53:39.650  WARN 8720 --- [http-nio-80-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3]
+2017-10-16 15:53:39.650 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:53:39.650 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:53:39.651 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/error]
+2017-10-16 15:53:39.651 DEBUG 8720 --- [http-nio-80-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2017-10-16 15:53:39.651 DEBUG 8720 --- [http-nio-80-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2017-10-16 15:53:39.651 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/error] is: -1
+2017-10-16 15:53:39.653 DEBUG 8720 --- [http-nio-80-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Oct 16 15:53:39 CST 2017, status=400, error=Bad Request, exception=org.springframework.http.converter.HttpMessageNotReadableException, message=JSON parse error: Unexpected character ('s' (code 115)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('s' (code 115)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@11fed12b; line: 1, column: 3], path=/schoolGuide/sight/addSight}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:53:39.653 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:53:39.653 DEBUG 8720 --- [http-nio-80-exec-8] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:54:43.758 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:54:43.758 DEBUG 8720 --- [http-nio-80-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:54:43.758 DEBUG 8720 --- [http-nio-80-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:54:43.758 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:54:43.759 DEBUG 8720 --- [http-nio-80-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:54:43.763 DEBUG 8720 --- [http-nio-80-exec-6] .w.s.m.m.a.ServletInvocableHandlerMethod : Failed to resolve argument 0 of type 'com.sxl.springboot.model.Sight'
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:201) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:150) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:128) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_74]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1702) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:558) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:456) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3080) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:3009) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1057) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:364) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:148) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 55 common frames omitted
+
+2017-10-16 15:54:43.764 DEBUG 8720 --- [http-nio-80-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41]
+2017-10-16 15:54:43.764 DEBUG 8720 --- [http-nio-80-exec-6] .w.s.m.a.ResponseStatusExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41]
+2017-10-16 15:54:43.765 DEBUG 8720 --- [http-nio-80-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41]
+2017-10-16 15:54:43.765  WARN 8720 --- [http-nio-80-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41]
+2017-10-16 15:54:43.765 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:54:43.765 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:54:43.766 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/error]
+2017-10-16 15:54:43.766 DEBUG 8720 --- [http-nio-80-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2017-10-16 15:54:43.767 DEBUG 8720 --- [http-nio-80-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2017-10-16 15:54:43.767 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/error] is: -1
+2017-10-16 15:54:43.770 DEBUG 8720 --- [http-nio-80-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Oct 16 15:54:43 CST 2017, status=400, error=Bad Request, exception=org.springframework.http.converter.HttpMessageNotReadableException, message=JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@624426b0; line: 1, column: 41], path=/schoolGuide/sight/addSight}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:54:43.770 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:54:43.770 DEBUG 8720 --- [http-nio-80-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:54:46.919 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:54:46.919 DEBUG 8720 --- [http-nio-80-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:54:46.919 DEBUG 8720 --- [http-nio-80-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:54:46.919 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:54:46.920 DEBUG 8720 --- [http-nio-80-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:54:46.921 DEBUG 8720 --- [http-nio-80-exec-1] .w.s.m.m.a.ServletInvocableHandlerMethod : Failed to resolve argument 0 of type 'com.sxl.springboot.model.Sight'
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:201) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:150) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:128) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_74]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1702) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:558) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:456) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3080) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:3009) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1057) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:364) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:148) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 55 common frames omitted
+
+2017-10-16 15:54:46.923 DEBUG 8720 --- [http-nio-80-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41]
+2017-10-16 15:54:46.923 DEBUG 8720 --- [http-nio-80-exec-1] .w.s.m.a.ResponseStatusExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41]
+2017-10-16 15:54:46.923 DEBUG 8720 --- [http-nio-80-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41]
+2017-10-16 15:54:46.923  WARN 8720 --- [http-nio-80-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41]
+2017-10-16 15:54:46.923 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:54:46.923 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:54:46.924 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/error]
+2017-10-16 15:54:46.924 DEBUG 8720 --- [http-nio-80-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2017-10-16 15:54:46.924 DEBUG 8720 --- [http-nio-80-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2017-10-16 15:54:46.924 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/error] is: -1
+2017-10-16 15:54:46.925 DEBUG 8720 --- [http-nio-80-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Oct 16 15:54:46 CST 2017, status=400, error=Bad Request, exception=org.springframework.http.converter.HttpMessageNotReadableException, message=JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@7091b3fb; line: 1, column: 41], path=/schoolGuide/sight/addSight}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:54:46.925 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:54:46.926 DEBUG 8720 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:55:52.614 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:55:52.615 DEBUG 8720 --- [http-nio-80-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:55:52.615 DEBUG 8720 --- [http-nio-80-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:55:52.615 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:55:52.615 DEBUG 8720 --- [http-nio-80-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:55:52.617 DEBUG 8720 --- [http-nio-80-exec-9] .w.s.m.m.a.ServletInvocableHandlerMethod : Failed to resolve argument 0 of type 'com.sxl.springboot.model.Sight'
+
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:201) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:150) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:128) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:158) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:128) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_74]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_74]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1702) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:558) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:456) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon2(UTF8StreamJsonParser.java:3080) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipColon(UTF8StreamJsonParser.java:3009) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1057) ~[jackson-core-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:364) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:148) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	... 55 common frames omitted
+
+2017-10-16 15:55:52.618 DEBUG 8720 --- [http-nio-80-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41]
+2017-10-16 15:55:52.618 DEBUG 8720 --- [http-nio-80-exec-9] .w.s.m.a.ResponseStatusExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41]
+2017-10-16 15:55:52.618 DEBUG 8720 --- [http-nio-80-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolving exception from handler [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41]
+2017-10-16 15:55:52.619  WARN 8720 --- [http-nio-80-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41]
+2017-10-16 15:55:52.619 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:55:52.619 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:55:52.622 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/error]
+2017-10-16 15:55:52.623 DEBUG 8720 --- [http-nio-80-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2017-10-16 15:55:52.624 DEBUG 8720 --- [http-nio-80-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2017-10-16 15:55:52.625 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/error] is: -1
+2017-10-16 15:55:52.627 DEBUG 8720 --- [http-nio-80-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Oct 16 15:55:52 CST 2017, status=400, error=Bad Request, exception=org.springframework.http.converter.HttpMessageNotReadableException, message=JSON parse error: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): was expecting a colon to separate field name and value
+ at [Source: java.io.PushbackInputStream@75bfd95b; line: 1, column: 41], path=/schoolGuide/sight/addSight}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:55:52.627 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:55:52.627 DEBUG 8720 --- [http-nio-80-exec-9] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:56:17.346 DEBUG 8720 --- [http-nio-80-exec-10] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:56:17.346 DEBUG 8720 --- [http-nio-80-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:56:17.347 DEBUG 8720 --- [http-nio-80-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:56:17.348 DEBUG 8720 --- [http-nio-80-exec-10] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:56:17.351 DEBUG 8720 --- [http-nio-80-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:56:17.956 DEBUG 8720 --- [http-nio-80-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Written [com.sxl.springboot.common.BaseModelResult@18d04f56] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:56:17.956 DEBUG 8720 --- [http-nio-80-exec-10] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:56:17.957 DEBUG 8720 --- [http-nio-80-exec-10] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2017-10-16 15:56:41.801 DEBUG 8720 --- [http-nio-80-exec-4] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/schoolGuide/sight/addSight]
+2017-10-16 15:56:41.801 DEBUG 8720 --- [http-nio-80-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /sight/addSight
+2017-10-16 15:56:41.801 DEBUG 8720 --- [http-nio-80-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [private com.sxl.springboot.common.BaseModelResult<java.lang.Integer> com.sxl.springboot.controller.SightController.addSight(com.sxl.springboot.model.Sight)]
+2017-10-16 15:56:41.802 DEBUG 8720 --- [http-nio-80-exec-4] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/schoolGuide/sight/addSight] is: -1
+2017-10-16 15:56:41.802 DEBUG 8720 --- [http-nio-80-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read [class com.sxl.springboot.model.Sight] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:56:42.071 DEBUG 8720 --- [http-nio-80-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Written [com.sxl.springboot.common.BaseModelResult@1d9c0d40] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73a845cb]
+2017-10-16 15:56:42.072 DEBUG 8720 --- [http-nio-80-exec-4] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2017-10-16 15:56:42.072 DEBUG 8720 --- [http-nio-80-exec-4] o.s.web.servlet.DispatcherServlet        : Successfully completed request

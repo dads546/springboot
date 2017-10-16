@@ -48,6 +48,18 @@ public class SchoolServiceImpl implements SchoolService{
 	public List<School> getAroundSchools(List<String> school_names) {
 		// TODO Auto-generated method stub
 		return dao.findByNameIn(school_names);
+	}
+	
+	public BaseModelResult<Integer> editSchool(School school) {
+		BaseModelResult<Integer> result = new BaseModelResult<Integer>();
+		try{
+			dao.saveAndFlush(school);
+			result.setData(1);
+		}catch(Exception e) {
+			result.setData(0);
+		}
+		
+		return result;
 	}	
 	
 }
