@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sxl.springboot.common.BaseModelResult;
-import com.sxl.springboot.model.School;
-import com.sxl.springboot.model.Sight;
+import com.sxl.springboot.model.User;
 import com.sxl.springboot.service.SchoolService;
 import com.sxl.springboot.service.SightService;
+import com.sxl.springboot.service.UserService;
 
 @RestController
 @SpringBootApplication
@@ -21,6 +21,16 @@ public class DataController {
 	private SchoolService schoolService;
 	
 	@Autowired
+	private UserService userService;
+	
+	@Autowired
 	private SightService sightService;
+	
+	@RequestMapping("/listUser")
+	public BaseModelResult<List<User>> listUser(){
+		BaseModelResult<List<User>> result = new BaseModelResult<List<User>>();
+		result.setData(userService.listUsers());
+		return result;
+	}
 
 }

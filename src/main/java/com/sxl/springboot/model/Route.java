@@ -25,6 +25,11 @@ public class Route implements Serializable {
 	@Column
 	private String pois;
 
+	
+	public Route() {
+		super();
+	}
+
 	public int getId() {
 		return id;
 	}

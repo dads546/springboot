@@ -26,7 +26,7 @@ public class SightController {
 	}
 	
 	@RequestMapping("/getSight")
-	public BaseModelResult<List<Sight>> getSightOfSchool(int schoolId){		
+	public BaseModelResult<List<Sight>> getSightOfSchool(@RequestBody Integer schoolId){		
 		return sightService.getSchoolSight(schoolId);
 	}
 	

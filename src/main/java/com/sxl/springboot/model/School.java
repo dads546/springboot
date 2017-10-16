@@ -31,16 +31,19 @@ public class School implements Serializable {
 		@Column
 		private String area;
 		
-		@Column
-		private int level;
+		@Column(columnDefinition="tinyint default 0")
+		private int level = 0;
 		
 		@Column
 		private String poi;
 		
-		@Column
-		private double radius;
+		@Column(columnDefinition="tinyint default 0")
+		private double radius = 0;
 
 		
+		public School() {
+			super();
+		}
 		public School(int id,String poi,double radius) {
 			this.id = id;
 			this.poi = poi;

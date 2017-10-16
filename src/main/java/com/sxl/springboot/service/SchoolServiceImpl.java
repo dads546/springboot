@@ -44,6 +44,10 @@ public class SchoolServiceImpl implements SchoolService{
 		}catch(Exception e) {
 			return 0;
 		}
+	}
+	public List<School> getAroundSchools(List<String> school_names) {
+		// TODO Auto-generated method stub
+		return dao.findByNameIn(school_names);
 	}	
 	
 }

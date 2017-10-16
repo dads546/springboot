@@ -15,4 +15,6 @@ public interface SchoolService {
 
 	int delSchool(int school_id);
 
+	List<School> getAroundSchools(List<String> school_names);
+
 }

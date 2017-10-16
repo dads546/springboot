@@ -32,6 +32,11 @@ public class User implements Serializable{
     private String area;
     
     
+    
+	public User() {
+		super();
+	}
+
 	public String getPhone() {
 		return phone;
 	}

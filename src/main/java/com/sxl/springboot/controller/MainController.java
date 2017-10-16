@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.sxl.springboot.common.BaseModelResult;
 import com.sxl.springboot.model.School;
@@ -15,7 +16,7 @@ import com.sxl.springboot.model.User;
 import com.sxl.springboot.service.MainService;
 import com.sxl.springboot.service.SchoolService;
 
-@Controller
+@RestController
 @SpringBootApplication
 @RequestMapping("/main")
 public class MainController {
@@ -29,6 +30,8 @@ public class MainController {
 	public String indexPage(){
 	    return "index.html";
 	}
+	
+	
 	@RequestMapping("/login")
 	public BaseModelResult<User> goLogin(@RequestBody String username,String password) {		
 		return mainService.login(username, password);

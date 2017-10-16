@@ -21,7 +21,7 @@ public class Sight implements Serializable {
 	@Column 
 	private int school_id;
 	
-	@Column
+	@Column(columnDefinition="tinyint default 0")
 	private int hot;
 	
 	@Column
@@ -30,8 +30,12 @@ public class Sight implements Serializable {
 	@Column
 	private String urls;
 	
-	@Column
+	@Column(columnDefinition="tinyint default 0")
 	private int radius;
+
+	public Sight() {
+		super();
+	}
 
 	public int getId() {
 		return id;

@@ -29,7 +29,7 @@ public class SightServiceImpl implements SightService{
 
 	public BaseModelResult<List<Sight>> getSchoolSight(int schoolId) {
 		BaseModelResult<List<Sight>> result = new BaseModelResult<List<Sight>>();
-		result.setData(dao.findAll());
+		result.setData(dao.findSightBySchool(schoolId));
 		return result;
 	}
 

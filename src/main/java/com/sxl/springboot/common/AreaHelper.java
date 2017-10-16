@@ -31,20 +31,18 @@ public class AreaHelper {
 	
 	public boolean isInSchool(String poi,List<School> schools) {
 		String[] pois = poi.split(",");
-		Collections.sort(schools, new Comparator<School>() {
-			public int compare(School s1, School s2) {
-
-				String[] pois1 = s1.getPoi().split(",");
-				double lat1 = Double.parseDouble(pois1[0]);
-				double lng1 = Double.parseDouble(pois1[1]);
-				
-				String[] pois2 = s2.getPoi().split(",");
-				double lat2 = Double.parseDouble(pois2[0]);
-				double lng2 = Double.parseDouble(pois2[1]);
-				
-				return 0;
+		double lat1 = Double.parseDouble(pois[0]);
+		double lng1 = Double.parseDouble(pois[1]);
+		for(School school:schools) {
+			double radius = school.getRadius();
+			String[] spois = school.getPoi().split(",");
+			double lat2 = Double.parseDouble(spois[0]);
+			double lng2 = Double.parseDouble(spois[1]);
+			if(GetDistance(lat1, lng1, lat2, lng2)<=radius) {
+				return true;
 			}
-		});
+			
+		}
 		
 		return false;
 	}
