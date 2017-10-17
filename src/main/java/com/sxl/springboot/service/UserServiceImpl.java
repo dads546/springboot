@@ -22,7 +22,8 @@ public class UserServiceImpl implements UserService {
 
 	public BaseModelResult<User> getUser(Integer id) {
 		BaseModelResult<User> result = new BaseModelResult<User>();
-		result.setData(dao.getOne(id));
+		result.setData(dao.findOne(id));
+		System.out.println(dao.findOne(id).getUsername());
 		return result;
 	}
 

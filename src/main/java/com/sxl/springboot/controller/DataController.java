@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sxl.springboot.common.BaseModelResult;
 import com.sxl.springboot.model.School;
 import com.sxl.springboot.model.Sight;
@@ -37,6 +38,7 @@ public class DataController {
 	}
 	
 	@RequestMapping("/getUserById")
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer","handler","fieldHandler"}) 
 	public BaseModelResult<User> getUserById(Integer id){
 		return userService.getUser(id);
 	}
@@ -52,7 +54,7 @@ public class DataController {
 	}
 	
 	@RequestMapping("/editUser")
-	public BaseModelResult<Integer> editUser(@RequestBody User user){
+	public BaseModelResult<Integer> editUser(User user){
 		return userService.editUser(user);
 	}
 	
