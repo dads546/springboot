@@ -20,5 +20,8 @@ public interface SchoolRepository extends JpaRepository<School, Integer> {
 	
 	List<School> findByNameIn(List<String> school_names);
 
+	@Query("select new com.sxl.springboot.model.School(s.name,s.intro,s.urls,s.address,s.area,s.level) from School s where s.id = ?1")
+	School findSchoolById(Integer school_id);
+
 
 }

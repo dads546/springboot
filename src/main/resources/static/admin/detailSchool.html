@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高校详情页</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+		
+<div class="jumbotron">
+   	 <div class="container">
+        <h1></h1>
+        <h2></h2>
+        <p></p>
+    </div>
+</div>
+		
+	
+	
+		
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script>
+	 window.onload = function(){
+	 		var schoolId =  request("schoolId");
+	 		$.ajax({
+	 			url:'/schoolGuide/school/getSchoolInfo?school_id='+schoolId,
+	 			async:false,
+	 			success:function(res){
+	 				$(".container>h1").html(res.data.name);
+	 				$(".container>h2").html(res.data.area);
+	 				$(".container>p").html(res.data.intro);
+	 			}
+	 		});
+	 		var url = '/schoolGuide/data/getSchoolSights?schoolId='+schoolId;
+	 		$.ajax({
+	                 type:"post",
+	                 url:url,
+	                 async:false,
+	                success:function(res){
+	                if(res.data.length>0){
+	                $.each(res.data, function(index, item){	       
+	                		var $div =  $('<div class="col-xs-6 col-md-3"></div>');
+	 						var $img = $('<img src="" style="height: 180px; width: 100%; display: block;" >')
+	 						$img.attr("src",item.urls);
+	 						
+	 						var $inDiv = $('<div style="height:206px;"></div>');
+	 						var $h3 = $('<h3></h3>');
+	 						var $p = $('<p style="display:block;height:100px;overflow:hidden"></p>');
+	 						$p.text(item.description);
+	 						$h3.text(item.name);
+	 						
+	 						$inDiv.append($h3);
+	 						$inDiv.append($p);
+	 						$div.append($img).append($inDiv);
+	 						$(".jumbotron").after($div);
+	                	});
+	                }	     
+	               }
+	       });
+	 }
+		
+		 function request(paras){   
+        var url = location.href;   
+        var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");   
+        var paraObj = {}   
+        for (i=0; j=paraString[i]; i++){   
+            paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);   
+        }   
+        var returnValue = paraObj[paras.toLowerCase()];   
+        if(typeof(returnValue)=="undefined"){   
+            return "";   
+        }else{   
+            return returnValue;   
+        }   
+    }
+	</script>
+		
+</body>
+
+</html>

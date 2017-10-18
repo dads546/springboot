@@ -64,7 +64,7 @@ public class DataController {
 	}
 	
 	@RequestMapping("/getSchoolSights")
-	public BaseModelResult<List<Sight>> getSightOfSchool(@RequestBody Integer schoolId){		
+	public BaseModelResult<List<Sight>> getSightOfSchool(int schoolId){		
 		return sightService.getSchoolSight(schoolId);
 	}
 }

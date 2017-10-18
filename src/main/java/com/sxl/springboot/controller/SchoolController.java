@@ -40,7 +40,7 @@ public class SchoolController {
 	}
 	
 	@RequestMapping("/getSchoolInfo")
-	public BaseModelResult<School> getSchool(@RequestBody Integer school_id){		
+	public BaseModelResult<School> getSchool(int school_id){		
 		return service.getSchoolInfo(school_id);
 	}
 	

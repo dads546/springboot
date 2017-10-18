@@ -49,6 +49,17 @@ public class School implements Serializable {
 			this.poi = poi;
 			this.radius = radius;
 		}
+		
+		
+		public School(String name, String intro, String urls, String address, String area, int level) {
+			super();
+			this.name = name;
+			this.intro = intro;
+			this.urls = urls;
+			this.address = address;
+			this.area = area;
+			this.level = level;
+		}
 		public int getId() {
 			return id;
 		}
@@ -104,5 +115,18 @@ public class School implements Serializable {
 		public void setRadius(double radius) {
 			this.radius = radius;
 		}
+		public String getIntro() {
+			return intro;
+		}
+		public void setIntro(String intro) {
+			this.intro = intro;
+		}
+		public String getUrls() {
+			return urls;
+		}
+		public void setUrls(String urls) {
+			this.urls = urls;
+		}
+		
 				
 }

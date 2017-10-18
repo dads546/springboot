@@ -17,7 +17,7 @@ public class SchoolServiceImpl implements SchoolService{
 	private SchoolRepository dao;
 	public BaseModelResult<School> getSchoolInfo(Integer school_id) {
 		BaseModelResult<School> result = new BaseModelResult<School>();
-		School school = dao.findOne(school_id);
+		School school = dao.findSchoolById(school_id);
 		if(school == null) {
 			result.setErrorCode(ErrorCode.NOSUCHSCHOOL);
 		}else {
