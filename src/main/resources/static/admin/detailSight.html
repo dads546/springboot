@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	
+	<div class="container">
+		<form class="form-horizontal" enctype="multipart/form-data" role="form" action="/schoolGuide/data/editSight" method="post">
+	<input  type="text" class="form-control hide" name="id" id="id"
+				   >
+	<div class="form-group">
+		<label for="name" class="col-sm-2 control-label">景点名称</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="name" name="name"
+				   >
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="intro" class="col-sm-2 control-label">景点介绍</label>
+		<div class="col-sm-10">
+			<textArea type="text" class="form-control" id="intro" name="intro"
+				 ></textArea>
+		</div>
+	</div>
+	<div class="form-group">
+	<label  class="col-sm-2 control-label">景点预览</label>
+		<div class="col-sm-offset-2 col-sm-10">
+			<img width="150px" height="150px" id="show" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508390150460&di=ca69d63e3d8b52583ecb44318e1dfc07&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb3119313b07eca8025fe11039b2397dda044835e.jpg"/>
+			<input type="file" name="file" id="file" value="更换图片"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">确认修改</button>
+		</div>
+	</div>
+</form>
+		
+	</div><!-- /.row -->	
+	
+		
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script>
+	$("#file").change(function(){
+		change();
+	});
+	function change() {
+		var r= new FileReader();
+		f=document.getElementById('file').files[0];
+		r.readAsDataURL(f);
+		r.onload=function(e){
+		document.getElementById('show').src=this.result;
+		}
+	}
+	window.onload = function(){
+		var sightId = request("sightId");
+		var url = '/schoolGuide/data/getSightById?sightId='+sightId;
+		
+		$.ajax({
+			url:url,
+			async:false,
+			success:function(res){
+				$("#id").val(res.data.id);
+				$("#name").val(res.data.name);
+				$("#intro").val(res.data.description);
+ 	 		}
+		});
+	}
+	function request(paras){   
+        var url = location.href;   
+        var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");   
+        var paraObj = {}   
+        for (i=0; j=paraString[i]; i++){   
+            paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);   
+        }   
+        var returnValue = paraObj[paras.toLowerCase()];   
+        if(typeof(returnValue)=="undefined"){   
+            return "";   
+        }else{   
+            return returnValue;   
+        }   
+    }
+	
+	
+
+
+	</script>	
+</body>
+
+</html>

@@ -18,7 +18,7 @@ public class SightServiceImpl implements SightService{
 	public BaseModelResult<Integer> addSight(Sight sight) {
 		BaseModelResult<Integer> result = new BaseModelResult<Integer>();
 		try {
-			dao.saveAndFlush(sight);
+			dao.save(sight);
 		}catch(Exception e) {
 			result.setErrorCode(ErrorCode.FAILED);
 			return result;
@@ -50,5 +50,28 @@ public class SightServiceImpl implements SightService{
 		}catch(Exception e) {
 			return 0;
 		}
+	}
+
+	public BaseModelResult<Sight> getSight(int sightId) {
+		BaseModelResult<Sight> result = new BaseModelResult<Sight>();
+		try {
+			result.setData(dao.findOne(sightId));
+		}catch(Exception e) {
+			result.setErrorCode(ErrorCode.FAILED);
+		}
+		return result;
+	}
+
+	public BaseModelResult<Integer> editSight(int id,String name, String intro, String fileName) {
+		BaseModelResult<Integer> result = new BaseModelResult<Integer>();
+		try {
+			dao.edit(id,name,intro,fileName);
+		}catch(Exception e) {
+			result.setErrorCode(ErrorCode.FAILED);
+			e.printStackTrace();
+			return result;
+		}
+		result.setData(1);
+		return result;
 	}	
 }

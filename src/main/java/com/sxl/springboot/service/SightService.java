@@ -14,4 +14,8 @@ public interface SightService {
 
 	int delSight(int sight_id);
 
+	BaseModelResult<Sight> getSight(int sightId);
+
+	BaseModelResult<Integer> editSight(int id,String name, String intro, String fileName);
+
 }
